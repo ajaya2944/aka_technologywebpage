@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <style>
+        /* Header container with less space */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:15px; /* Reduced padding for a smaller header */
+            background-color: white; /* white background */
+        }
+
+        /* Logo container */
+         .logo-container {
+         display: flex;
+         align-items: center;
+          }
+
+        /* Logo styles */
+        .logo img {
+            height: 200px; /* Adjust the height as needed */
+            margin-right: 20px; /* Space between logo and title */
+        }
+
+        /* Navigation bar styles */
+        nav ul {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            font-size: 40px;
+        }
+
+        nav ul li {
+            margin: 0 20px; /* Space between the links */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff; /* Blue color for the links */
+            font-size: 20px; /* Slightly smaller font size */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: lightblue;
+          }
+ 
+    
+
+    /* Style the footer */
+    footer {
+      background-color: Blue;
+      padding: 3px;
+      text-align: center;
+      color: white;
+    }
+
+
+/* Additional styling for text content */
+h1, p {
+    color: white;
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header to include both logo and navigation -->
+    <div class="header">
+        <!-- Logo on the left -->
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="A.K.A Technology Logo">
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'service' %}">Service</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page content -->
+    <div>
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </div>
+    <footer>
+        <p>© 2024 A.K.A Technology</p> 
+    </footer>
+</body>
+</html>

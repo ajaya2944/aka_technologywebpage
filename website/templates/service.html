@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+/* Container for the entire service grid */
+.service-container {
+    .service-container 
+        display: flex;
+        flex-wrap: nowrap; /* Prevents wrapping to the next line */
+        justify-content: space-between; /* Adds space between cards */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    
+    
+}
+
+
+/* Individual service card */
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Icon styling */
+.service-card .icon img {
+    width: 80px !important; /* Force the width */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+
+/* Service title */
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Service list */
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-card ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+</style>
+
+<div class="service-container">
+    <!--Tesxt Content-->
+    <h1>
+        Our Services
+    </h1>
+    <div class="service-card">
+      
+        <div class="icon">
+            <img src="{% static 'images/app-development.png' %}" alt="App Development Icon">
+        </div>
+        <h3>App Development</h3>
+        <ul>
+            <li>Ecommerce Apps</li>
+            <li>Food Delivery Apps</li>
+            <li>Educational Apps</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <div class="icon">
+            <img src="{% static 'images/web-design.png' %}" alt="Web Design Icon">
+        </div>
+        <h3>Web Development</h3>
+        <ul>
+            <li>Business and Corporate</li>
+            <li>Ecommerce Website</li>
+            <li>Educational Website</li>
+            <li>News Portal Website</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <div class="icon">
+            <img src="{% static 'images/graphics.png' %}" alt="Graphics Design Icon">
+        </div>
+        <h3>Graphics Design</h3>
+        <ul>
+            <li>Package Design</li>
+            <li>Mail Signature</li>
+            <li>Social Media Banner</li>
+            <li>Menu,Chirasi & printing</li>
+        </ul>
+    </div>
+    <div class="service-card">
+        <div class="icon">
+            <img src="{% static 'images/digitalmarketing.png' %}" alt="Digital Marketing Icon">
+        </div>
+        <h3>Digital Marketing</h3>
+        <ul>
+            <li>Website Marketing</li>
+            <li>Pay-Per-Click Advertising</li>
+            <li>Social Media Banner</li>
+        
+        </ul>
+    </div>
+
+    <!-- Add more service cards below as needed -->
+
+</div>
+{% endblock %}

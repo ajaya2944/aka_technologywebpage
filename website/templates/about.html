@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<style>
+    h1 {
+        color: navy;
+        font-size: 40px;
+    }
+    p {
+        color: brown;
+        font-size: 20px;
+    }
+
+    /* Styling the image */
+    .about-image {
+
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        margin-left: 600px; /* Space between the text and the image */
+        border-radius: 10px; /* Optional: rounded corners for the image */
+        
+    }
+</style>
+
+<div class="home-content">
+    <!-- Text content on the left -->
+    <div class="text-content">
+        <h1>We Make Technology For You</h1>
+        <p>
+           私たちはA.K.A Technologyのデジタル愛好家チームです。
+           A.K.A Technologyは、ウェブ開発、アプリ開発、グラフィックデザインを専門とするITエージェンシーです。
+           デジタルに対する情熱と専門技術を組み合わせ、革新的なソリューションを提供しています。私たちの目標は、
+           ビジネスを成功へ導くために、美しく機能的なデザインと強力なアプリケーションを提供することです。
+           クライアントのニーズに合わせたサービスを提供し、デジタルフレンドリーな社会の構築を目指しています。
+           A.K.A Technologyを、オンラインでの成功を共に目指すパートナーにお選びください。
+        </p>
+    </div>
+
+    <!-- Image on the right side -->
+    <div class="right-image">
+        <img class="about-image" src="{% static 'images/about.jpg' %}" alt="About Image">
+    </div>
+</div>
+{% endblock %}

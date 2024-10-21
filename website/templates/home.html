@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <style>
+                
+    /* Content container for the paragraph and image */
+    .home-content {
+        display: flex;
+        justify-content: space-between; /* Distribute space between the text and image */
+        align-items: flex-start;
+        margin: 20px auto; /* Center the content horizontally */
+        max-width: 1200px; /* Set a max-width to control the page size */
+        padding: 0 20px; /* Add some padding to prevent content from touching the edges */
+    }
+    
+    /* Text content on the left */
+    .text-content {
+        flex: 1; /* Make the text take up available space */
+        padding-right: 20px; /* Add space between the text and the image */
+        font-family: Arial, sans-serif; /* Ensure a clean font */
+    }
+    
+    /* Larger and more prominent h1 */
+    .text-content h1 {
+        font-size: 2.5em; /* Increase the size of the heading */
+        font-weight: bold; /* Make the heading bold */
+        margin-bottom: 20px; /* Add space between the heading and paragraph */
+        color: white; /* Change heading text color */
+        background-color: blue; /* Set a background color for the heading */
+        padding: 10px; /* Add some padding around the text */
+        border-radius: 5px; /* Rounded corners */
+    }
+    
+    /* Style for the paragraph */
+    .text-content p {
+        font-size: 1.3em; /* Increase the font size for readability */
+        line-height: 1.6; /* Improve line spacing */
+        margin-bottom: 20px; /* Add space at the bottom */
+        color: navy; /* Set paragraph text color to navy blue */
+        background-color: orange; /* Set a background color for the paragraph */
+        padding: 10px; /* Add padding inside the paragraph */
+        border-radius: 5px; /* Rounded corners */
+    }
+    
+    /* Image on the right side */
+    .right-image img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        margin-left: 20px; /* Space between the text and the image */
+        border-radius: 5px; /* Optional: rounded corners for the image */
+    }
+    
+</style>
+
+<div class="home-content">
+    <!-- Text content on the left -->
+    <div class="text-content">
+        <h1>A.K.A テクノロジー</h1>
+        <p>
+            A.K.A テクノロジーは、グラフィックデザイン、<br>
+            ウェブ開発、アプリ開発のサービス<br>
+            を提供する最高のエージェンシーです。
+            それぞれの分野で専門的な技術と創造力を駆使し、<br>
+            お客様のニーズに合わせた高品質なソリューションを提供しています。
+        </p>
+    </div>
+
+           
+
+    <!-- Image on the right side -->
+    <div class="right-image">
+        <img src="{% static 'images/your-image.png' %}" alt="Right Side Image">
+    </div>
+</div>
+{% endblock %}
