@@ -27,11 +27,10 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
-    "akatechnologyhomepage-932aa8cbbe84.herokuapp.com",
-    "127.0.0.1",  # Keep this for local development
-    "localhost",
+    "akatechnology.net",
+    "www.akatechnology.net",
+    "akatechnologyhomepage-932aa8cbbe84.herokuapp.com", 
 ]
-
 
 
 # Application definition
