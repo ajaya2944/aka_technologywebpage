@@ -5,23 +5,60 @@
 
 {% block content %}
 <style>
+    /* Global Styling */
     h1 {
         color: navy;
         font-size: 40px;
     }
+
     p {
         color: brown;
         font-size: 20px;
     }
 
-    /* Styling the image */
-    .about-image {
+    /* Styling the container */
+    .home-content {
+        display: flex;
+        flex-wrap: wrap; /* Ensures responsiveness */
+        align-items: center; /* Vertically centers the content */
+        justify-content: space-between; /* Space between text and image */
+        padding: 20px; /* Adds some padding */
+        gap: 20px; /* Adds spacing between elements */
+    }
 
-        max-width: 100%; /* Make the image responsive */
-        height: auto; /* Maintain the aspect ratio */
-        margin-left: 600px; /* Space between the text and the image */
-        border-radius: 10px; /* Optional: rounded corners for the image */
-        
+    /* Styling the text content */
+    .text-content {
+        flex: 1; /* Takes up available space */
+        max-width: 55%; /* Limits text width for better readability */
+        min-width: 300px; /* Prevents text from becoming too narrow */
+    }
+
+    /* Styling the image container */
+    .right-image {
+        width: 40%; /* Image container takes up 40% of the width */
+        text-align: right; /* Aligns image to the right */
+    }
+
+    /* Styling the image */
+    .right-image img {
+        width: 100%; /* Ensures full width within container */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 10px; /* Optional: rounded corners */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .home-content {
+            flex-direction: column; /* Stacks elements on smaller screens */
+            text-align: center;
+        }
+        .text-content {
+            max-width: 100%;
+        }
+        .right-image {
+            width: 100%;
+            text-align: center; /* Centers image */
+        }
     }
 </style>
 
@@ -41,7 +78,7 @@
 
     <!-- Image on the right side -->
     <div class="right-image">
-        <img class="about-image" src="{% static 'images/about.jpg' %}" alt="About Image">
+        <img src="{% static 'images/logo.png' %}" alt="A.K.A Technology Logo">
     </div>
 </div>
 {% endblock %}

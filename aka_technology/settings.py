@@ -136,7 +136,10 @@ EMAIL_HOST_PASSWORD = 'nofm hvij nbve dsnq'  # Your Gmail password or an App Pas
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is where Django will collect all static files for deployment
+STATICFILES_DIRS = [
+        BASE_DIR / "website/static",  # Add this line
+    BASE_DIR / "static",  # Keep this if you have global static files
+] # This is where Django will collect all static files for deployment
 
 # Media files (uploads)
 MEDIA_URL = '/media/'
