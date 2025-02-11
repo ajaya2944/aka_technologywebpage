@@ -60,6 +60,28 @@
             text-align: center; /* Centers image */
         }
     }
+
+    /* Desktop Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+    }
+}
+
 </style>
 
 <div class="home-content">
@@ -78,7 +100,7 @@
 
     <!-- Image on the right side -->
     <div class="right-image">
-        <img src="{% static 'images/logo.png' %}" alt="A.K.A Technology Logo">
+        <img src="{% static 'images/about.jpg' %}" alt="A.K.A Technology Logo">
     </div>
 </div>
 {% endblock %}

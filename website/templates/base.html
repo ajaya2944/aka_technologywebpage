@@ -1,12 +1,16 @@
 {% load static %}
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Website{% endblock %}</title>
     <style>
+        
         /* Header container with less space */
         .header {
             display: flex;
@@ -70,6 +74,26 @@
 h1, p {
     color: white;
     text-align: center;
+}
+/* Desktop Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+    }
 }
 
     </style>

@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -141,9 +141,7 @@ EMAIL_HOST_PASSWORD = 'nofm hvij nbve dsnq'  # Your Gmail password or an App Pas
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-        BASE_DIR / "website/static",  # Add this line
-    BASE_DIR / "static", 
-    os.path.join(BASE_DIR, 'static') # Keep this if you have global static files
+    BASE_DIR / "static",  # This is enough; no need to repeat
 ] # This is where Django will collect all static files for deployment
 
 # Media files (uploads)
